@@ -14,6 +14,15 @@ For example for 1st part of Task 1:
 bash compile_and_run_file.sh task_1/task_1_part_2.cu task_1/input_level_1.txt
 ```
 ### [Task 1](task_1)
-Using basic CUDA commands for parallelization (threadidx, blockidx, synchronization, shared variables etc.). Sorting with CUB's RadixSort.
+- Using basic CUDA commands for parallelization (threadidx, blockidx, synchronization, shared variables etc.). 
+- Sorting with CUB's RadixSort.
 
 Code is split into two subtasks. I didn't attempt to make this clean and reusable, but the output results are correct according to website.
+
+### [Task 2](task_2)
+
+First part: 
+- Summing of array by using shared memory in blocks. 
+- Atomic add. 
+- Figured out there is a GPU printf for debugging. 
+- Used for the first time 2d array (double pointer) for allocation of memory.
