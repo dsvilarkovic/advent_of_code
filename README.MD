@@ -35,3 +35,11 @@ Bool array is then summed and reduced inside a GPU as well for number of 1D arra
 #### Second part:
 As the first part, task is about whether an 1d array inside a 2d array (N 1d arrays exist inside a 2d array, but each of it's own length) is safe by some particular criteria. 
 But this time with the twist! We need to check for each 1d array whether removing. I wanted to do something fancy. Instead I opted in for just looping through array and allocating n-1 array to check for. I wanted to do this in parallel, but CUDA mentions some dynamic allocation which I am not touching yet.
+
+### [Task 3](task_3)
+
+This one is pretty easy, since it's just moving through the code in a serial way. I made it extra complicated by moving full string to GPU and calling thread on each string position and doing an atomic addition on all of them.
+
+#### First part:
+1. [task_3/task_3_part_1_serial.cu](task_3/task_3_part_1_serial.cu) - serialized way of doing things. No CUDA used.
+2. [task_3/task_3_part_1_parallel.cu](task_3/task_3_part_1_parallel.cu) - parallelized way of calling thread on each string position.
